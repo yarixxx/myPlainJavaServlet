@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="PlainJavaServlet" default="pack" basedir=".">
+  <description>Builds, tests, and runs the project PlainJavaServlet.</description>
+
+
+  <target name="clean">
+    <delete dir="build/classes" />
+    <mkdir dir="build/classes"/>
+  </target>
+
+  <target name="compile">
+    <javac srcdir="src/" destdir="build/classes/">
+      <classpath>
+        <pathelement path="lib/javax.servlet.jar"/>
+        <pathelement path="lib/java-json.jar"/>
+      </classpath>
+    </javac>
+  </target>
+
+  <target name="war">
+    <war
+      destfile="servlet.war"
+      webxml="config/web.xml">
+      <classes dir="build/classes"/>
+      <lib dir="lib/" />
+    </war>
+  </target>
+
+  <target name="pack" depends="clean,compile,war" />
+
+</project>
