@@ -1,14 +1,19 @@
 package plainjavaservlet;
 
-import java.io.*;
-import javax.servlet.*;
-import javax.servlet.http.*;
-import org.json.*;
-import javax.annotation.*;
-import java.util.*;
+import java.io.IOException;
+import java.io.PrintWriter;
+
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServlet;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import org.json.JSONException;
+import org.json.JSONObject;
 
 public class ServletController extends HttpServlet {
-    private ServletService servletService;
+	private static final long serialVersionUID = -2072644970465198198L;
+	private ServletService servletService;
    
     @Override
     public void init() {
