@@ -154,5 +154,100 @@ public class Problems1Test {
 	public void testDiff2_20() {
 		assertEquals(problems.diff21(50), 58);
 	}
+	
+	@Test
+	public void testParrotTrouble() {
+		assertTrue(problems.parrotTrouble(true, 6));
+	}
+	
+	@Test
+	public void testParrotTrouble2() {
+		assertFalse(problems.parrotTrouble(true, 7));
+	}
+	
+	@Test
+	public void testParrotTrouble3() {
+		assertFalse(problems.parrotTrouble(false, 6));
+	}
+	
+	@Test
+	public void testParrotTrouble4() {
+		assertTrue(problems.parrotTrouble(true, 21));
+	}
+	
+	@Test
+	public void testParrotTrouble5() {
+		assertFalse(problems.parrotTrouble(false, 21));
+	}
+
+	@Test
+	public void testParrotTrouble6() {
+		assertFalse(problems.parrotTrouble(false, 20));
+	}
+
+	@Test
+	public void testParrotTrouble7() {
+		assertTrue(problems.parrotTrouble(true, 23));
+	}
+	
+	@Test
+	public void testParrotTrouble8() {
+		assertFalse(problems.parrotTrouble(false, 23));
+	}
+
+	@Test
+	public void testParrotTrouble9() {
+		assertFalse(problems.parrotTrouble(true, 20));
+	}
+	    
+	@Test
+	public void testParrotTrouble10() {
+		assertFalse(problems.parrotTrouble(false, 12));
+	}
+	
+	@Test
+	public void testMakes10() {
+		assertTrue(problems.makes10(9, 10));
+	}
+	
+	@Test
+	public void testMakes10_1() {
+		assertFalse(problems.makes10(9, 9));
+	}
+	
+	@Test
+	public void testMakes10_2() {
+		assertTrue(problems.makes10(1, 9));
+	}
+	
+	@Test
+	public void testMakes10_3() {
+		assertTrue(problems.makes10(10, 1));
+	}
+
+	@Test
+	public void testMakes10_4() {
+		assertTrue(problems.makes10(10, 10));
+	}
+
+	@Test
+	public void testMakes10_5() {
+		assertTrue(problems.makes10(8, 2));
+	}
+	
+	@Test
+	public void testMakes10_6() {
+		assertFalse(problems.makes10(8, 3));
+	}
+	    
+	@Test
+	public void testMakes10_7() {
+		assertTrue(problems.makes10(10, 42));
+	}
+	
+	@Test
+	public void testMakes10_8() {
+		assertTrue(problems.makes10(12, -2));
+	}
 
 }
